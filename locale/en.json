@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Delete conversation",
+    "description": "Adds a Delete conversation action to the session row menu. After a confirmation it permanently removes that session's stored log plus its workspace, pin, and archive registrations; the Harness keeps no undo. A conversation that is currently open, running, owns subagent conversations, or is still the target of an active scheduled task is refused instead of deleted."
+  }
+}

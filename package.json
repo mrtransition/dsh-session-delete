@@ -1,0 +1,49 @@
+{
+  "name": "@local/dsh-session-delete",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Permanently delete a conversation (session) from the DeepSeek Harness session list.",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "session",
+    "conversation"
+  ],
+  "homepage": "https://github.com/mrtransition/dsh-session-delete#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrtransition/dsh-session-delete.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mrtransition/dsh-session-delete/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "README.md",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-context-menu",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-api-session-controller"
+      ]
+    }
+  }
+}

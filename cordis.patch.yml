@@ -1,0 +1,4 @@
+# Adds the "Delete session" action and its Host deletion endpoint.
+- insert:
+    - id: session-delete
+      name: '@local/dsh-session-delete'
